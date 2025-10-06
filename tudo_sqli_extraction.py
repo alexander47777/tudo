@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# @title  TUDO Unauthenticated RCE
+# @title  TUDO SQLI EXTRACTION
 # @author brave_
 
 
