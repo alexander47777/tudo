@@ -1,4 +1,4 @@
-# 🛡️ TUDO CTF: White-Box Penetration Test Write-up
+# 🛡️ TUDO (Vulnerable PHP Web-App): White-Box Penetration Test Write-up
 
 This repository documents the comprehensive security assessment and exploitation of the TUDO vulnerable web application (PHP / PostgreSQL). The project served as a white-box simulation, successfully chaining multiple critical vulnerabilities to achieve Remote Code Execution (RCE) and full administrative control.
 
@@ -15,6 +15,24 @@ This write-up contains a structured record of the assessment: the vulnerabilitie
 - **Target**: TUDO vulnerable web application (PHP + PostgreSQL)
 - **Type**: White-box (source code available)
 - **Goal**: Achieve Remote Code Execution (RCE) and administrative control via chained vulnerabilities
+- **Testing Approach**: Manual source code analysis and targeted exploitation
+
+## 🏗️ Application Architecture
+
+- **Frontend**: PHP with custom templating
+- **Database**: PostgreSQL
+- **Authentication**: Session-based with user roles
+- **File Handling**: Upload functionality with various filters
+
+## 🔍 Vulnerability Summary
+
+| Severity | Vulnerability Type | Location | Impact |
+|----------|-------------------|----------|---------|
+| Critical | SQL Injection | Multiple endpoints | Authentication bypass, data extraction |
+| Critical | Unsafe File Upload | Upload functionality | Remote Code Execution |
+| High | Insecure Direct Object Reference | User endpoints | Information disclosure |
+| Medium | Weak Session Management | Authentication system | Privilege escalation |
+| Low | Information Disclosure | Error handling | Attack surface enumeration |
 
 ## 🛠️ Methodology
 
