@@ -26,8 +26,8 @@ This write-up contains a structured record of the assessment: the vulnerabilitie
 
 ## 🔍 Vulnerability Summary
 
-| ID | Vulnerability | Severity | CVSS | RCE Capable |
-|----|---------------|----------|------|-------------|
+| ID | Vulnerability | Severity | CVSS |
+|----|---------------|----------|------|
 | TUDO-001 | SQL Injection in `forgotusername.php` | Critical | 9.8 |
 | TUDO-002 | Weak Password Hashing (Unsalted SHA-256) | Critical | 9.1 |
 | TUDO-005 | Stored XSS Leading to Account Takeover | Critical | 9.0 |
