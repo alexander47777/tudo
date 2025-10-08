@@ -26,13 +26,18 @@ This write-up contains a structured record of the assessment: the vulnerabilitie
 
 ## 🔍 Vulnerability Summary
 
-| Severity | Vulnerability Type | Location | Impact |
-|----------|-------------------|----------|---------|
-| Critical | SQL Injection | Multiple endpoints | Authentication bypass, data extraction |
-| Critical | Unsafe File Upload | Upload functionality | Remote Code Execution |
-| High | Insecure Direct Object Reference | User endpoints | Information disclosure |
-| Medium | Weak Session Management | Authentication system | Privilege escalation |
-| Low | Information Disclosure | Error handling | Attack surface enumeration |
+| ID | Vulnerability | Severity | CVSS | RCE Capable |
+|----|---------------|----------|------|-------------|
+| TUDO-001 | SQL Injection in `forgotusername.php` | Critical | 9.8 |
+| TUDO-002 | Weak Password Hashing (Unsalted SHA-256) | Critical | 9.1 |
+| TUDO-005 | Stored XSS Leading to Account Takeover | Critical | 9.0 |
+| TUDO-006 | PHP Object Injection | Critical | 9.8 |
+| TUDO-007 | Server-Side Template Injection (SSTI) | Critical | 9.6 |
+| TUDO-008 | Unrestricted File Upload Leading to RCE | Critical | 9.8 |
+| TUDO-009 | PostgreSQL COPY PROGRAM Exploitation | Critical | 10.0 |
+| TUDO-003 | Cross-Site Request Forgery (CSRF) | High | 8.8 |
+| TUDO-004 | Hardcoded Database Credentials | High | 8.6 |
+| TUDO-011 | Username Enumeration | Medium | 5.3 |
 
 ## 🛠️ Methodology
 
